@@ -1,0 +1,50 @@
+h1 {
+    text-decoration: underline;
+}
+
+.col-6 {
+    width: 480px;
+}
+
+hr {
+    background-color: red;
+  }
+
+.carousel-item img {
+    height: 750px;
+}
+
+.not-sold-ticket{
+    width: 50px;
+    height: 50px;
+    background:aqua;
+    border: 1px solid black;
+    margin: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.sold-ticket{
+    width: 50px;
+    height: 50px;
+    background:pink;
+    border: 1px solid black;
+    margin: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+#cinema-hall{
+    width: 660px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.monitor{
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    font-size: 22px;
+    background: rgb(138, 231, 76);
+}
