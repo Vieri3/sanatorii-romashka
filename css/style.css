@@ -8,43 +8,49 @@ h1 {
 
 hr {
     background-color: red;
-  }
+}
 
 .carousel-item img {
     height: 750px;
 }
 
-.not-sold-ticket{
+.not-sold-ticket {
     width: 50px;
     height: 50px;
-    background:aqua;
+    background: aqua;
     border: 1px solid black;
     margin: 5px;
     font-size: 12px;
     text-align: center;
 }
 
-.sold-ticket{
+.sold-ticket {
     width: 50px;
     height: 50px;
-    background:pink;
+    background: pink;
     border: 1px solid black;
     margin: 5px;
     font-size: 12px;
     text-align: center;
 }
 
-#cinema-hall{
+#cinema-hall {
     width: 660px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.monitor{
+.monitor {
     width: 400px;
     height: 50px;
     text-align: center;
     font-size: 22px;
     background: rgb(138, 231, 76);
+}
+
+.btn_otpravit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

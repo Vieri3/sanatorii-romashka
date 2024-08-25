@@ -1,6 +1,6 @@
 <?php
 include "header.php";
-include "cinema-ticket.php"
+require_once "admin/connect.php";
 ?>
 
  <div class="container text-center">
@@ -43,17 +43,13 @@ include "cinema-ticket.php"
                 </article>
 
                 <aside class="col">
-                    <?php foreach($cinema_ticket as $key => $value) { ?>
-                        <h5> <?php echo $key?> </h5>
-                            <ul>
-                                <?php foreach($value as $k => $v) { ?>
-
-                                    <?php echo '<li><a href = "/cinema-hall.php?date='. $key . '&time=' . $k .  '&cinema=' . $v["title"] . '">' . $k .' '. $v["title"]  .  '</a></li>' ?>
-
-                                <?php }?>
-                            </ul>
-                    <?php }?>
-                       
+                    <ul>
+                        <?php foreach($cinema as $key) { ?>
+                            <li>
+                                <a href = "/cinema-hall.php?id=<?=$key[0]?>"> <?=$key[1]?> <?=$key[2]?> <?=$key[3]?> </a>
+                            </li>
+                        <?php }?>
+                    </ul>
                 </aside>
             </div>
         </div>

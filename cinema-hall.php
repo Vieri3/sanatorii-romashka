@@ -1,46 +1,49 @@
 <?php
 include "header.php";
-include "cinema-ticket.php"
+require_once "admin/connect.php";
+$cinema_mass;
+foreach($cinema as $key){
+    if($key[0] == $_GET["id"]){
+        $cinema_mass = $key;
+    }
+}
+
+$cinema_mass_place = explode(",", $cinema_mass[5]);
+
 ?>
 
-<div class="container monitor"><?php echo $_GET["date"]; ?> || <?php echo $_GET["time"]; ?> || <?php echo $_GET["cinema"]; ?></div>
+<div class="container monitor"><?=$cinema_mass[3] ?></div>
 
-<form action="check-list.php" method="POST">
-
-    <div class="container" id="cinema-hall">
+<form action="admin/ticket-check.php" method="POST">
     
-        <?php foreach($cinema_ticket as $key=>$value) { 
-            if($_GET["date"] == $key){
-                foreach($value as $k=>$v){
-                  if($_GET["time"] == $k && $_GET["cinema"] == $v["title"]){
-                    foreach($v["hall"] as $index=>$place){
-                        if($place === 0){
-                            echo '<div class = "not-sold-ticket">М-'. ($index + 1) . '<input type="hidden" name="pl[]" value="' . $place .' "></div>';
-                        }else{
-                            echo '<div class = "sold-ticket">М-'. ($index + 1) . '<input type="hidden" name="pl[]" value="' . $place .' "></div>';
-                        }
+    <div class="container" id="cinema-hall">
 
-                    }
-                  }
-                }
-            }
-        }
+        <?php foreach($cinema_mass_place as $index=>$place) { 
+            if($place == 0) {
         ?>
+            <div class = "not-sold-ticket"> 
+                М-<?php echo ($index + 1) ?> 
+                <input type="hidden" name="pl[]" value="<?php echo $place ?>">
+            </div>
 
-     
-           
-                  
-           
+         <?php } else { ?>
 
-            
-        <?php ?>    
+            <div class = "sold-ticket"> 
+                М-<?php echo ($index + 1) ?> 
+                <input type="hidden" name="pl[]" value="<?php echo $place ?>">
+            </div>
+
+        <?php } } ?>
+
 
     </div>
 
-    <button type="submit" class="btn btn-danger">Отправить</button>
+    <input type="hidden" name="pl[]" value="<?=$cinema_mass[0] ?>">
+
+    <div class="btn_otpravit">
+        <button type="submit" class="btn btn-danger">Отправить</button>
+    </div>
     
 </form>
-
-
 
 <?php include "footer.php"; ?>
