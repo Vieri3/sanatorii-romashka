@@ -29,7 +29,7 @@
 	$pdo = new PDO('mysql:host=localhost;dbname=san_rom;port=3306', 'root', '');
 	
 	//INSERT
-	$sql = 'INSERT INTO users(name, email, password) VALUES(?,?,?)';
+	$sql = "INSERT INTO users(`name`, `email`, `password`) VALUES(?,?,?)";
 	$query = $pdo->prepare($sql);
 	$query->execute([$name, $email, $password]);
 	

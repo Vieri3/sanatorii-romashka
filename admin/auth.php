@@ -21,7 +21,7 @@
 	$pdo = new PDO('mysql:host=localhost;dbname=san_rom;port=3306', 'root', '');
 	
 	// запрос в базу данных
-	$sql = 'SELECT id FROM users WHERE name = ? AND password = ?';
+	$sql = "SELECT id FROM `users` WHERE `name` = ? AND `password` = ?";
 	
 	// подготовка 
 	$query = $pdo->prepare($sql);

@@ -54,6 +54,24 @@ require_once "connect.php";
 		</form>
 
 		<h2>Таблица еды</h2>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>name</th>
+				<th>date</th>
+				<th>time</th>
+				<th>meal</th>
+			</tr>
+			<? foreach($meal as $item) { ?>
+				<tr>
+					<td><?=$item[0] ?></td>
+					<td><?=$item[1] ?></td>
+					<td><?=$item[2] ?></td>
+					<td><?=$item[3] ?></td>
+					<td><?=$item[4] ?></td>
+				</tr>
+			<? }; ?>
+		</table>
 
 </body>
 </html>
