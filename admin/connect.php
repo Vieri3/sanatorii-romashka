@@ -10,4 +10,7 @@
     $meal = mysqli_query($connect, "SELECT * FROM `meal`");
     $meal = mysqli_fetch_all($meal); 
 
+    $news =  mysqli_query($connect, "SELECT * FROM `news`");
+    $news = mysqli_fetch_all($news); 
+
 ?>
