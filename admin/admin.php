@@ -51,25 +51,33 @@
 			<button type="submit">Добавить</button>
 		</form>
 
-		<h2>Таблица еды</h2>
-		<table>
-			<tr>
-				<th>id</th>
-				<th>name</th>
-				<th>date</th>
-				<th>time</th>
-				<th>meal</th>
-			</tr>
-			<? foreach($meal as $item) { ?>
+		<h2>Таблица заказов еды клиентов гостинницы</h2>
+			<table>
 				<tr>
-					<td><?=$item[0] ?></td>
-					<td><?=$item[1] ?></td>
-					<td><?=$item[2] ?></td>
-					<td><?=$item[3] ?></td>
-					<td><?=$item[4] ?></td>
+					<th>id</th>
+					<th>name</th>
+					<th>date</th>
+					<th>time</th>
+					<th>meal</th>
 				</tr>
-			<? }; ?>
-		</table>
+				<? foreach($meal as $item) { ?>
+					<tr>
+						<td><?=$item[0] ?></td>
+						<td><?=$item[1] ?></td>
+						<td><?=$item[2] ?></td>
+						<td><?=$item[3] ?></td>
+						<td><?=$item[4] ?></td>
+					</tr>
+				<? }; ?>
+			</table>
+
+			<h2>Таблица-меню еды в гостинницы</h2>
+					<p>редактируемая таблица добавления изменения меню</p>
+			
+			<h2>Таблица новостей</h2>
+				<p>редактируемая таблица добавления изменения новостей</p>
+
+		<!-- нужно сделать переключение между пунктами -->
 
 </body>
 </html>
