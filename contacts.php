@@ -1,9 +1,6 @@
-<?php
-include "header.php";
-?>
+<?php include "header.php" ?>
 
 <div class="container">
-
 
     <div class="d-flex justify-content-around">
         <div class="card" style="width: 18rem;">
@@ -44,11 +41,7 @@ include "header.php";
     <p>Почта: proklytii@rai.pizdetz</p>
   </div>
 
-
 </div>
 
 
-
-<?php
-include "footer.php"
-?>
+<?php include "footer.php" ?>

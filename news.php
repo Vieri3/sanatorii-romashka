@@ -1,5 +1,5 @@
 <?php include "header.php" ?>
-<? require_once "admin/connect.php" ?>
+<?php require_once "admin/connect.php" ?>
 
 <div class="container">
     <?php foreach($news as $item){ ?>

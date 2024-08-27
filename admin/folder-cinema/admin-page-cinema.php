@@ -1,11 +1,11 @@
-<?php include "connect.php" ?>
+<?php  require_once "../connect.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../css/admin.css">
+	<link rel="stylesheet" href="../../css/admin.css">
 	<title>ADMIN-cinema</title>
 </head>
     <body>
@@ -38,7 +38,7 @@
 
         <h2>Добавить новые фильмов</h2>
 
-            <form action="add-cinema.php" method="post">
+            <form action="admin/folder-cinema/add-cinema.php" method="post">
                 <p>date</p>
                 <input type="text" name="date" placeholder="YYYY-MM-DD">
                 <p>time</p>

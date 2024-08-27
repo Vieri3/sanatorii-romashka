@@ -1,9 +1,4 @@
-<?php
-include "header.php";
-/*
-img/gallery/pic-1.jpg
-*/
-?>
+<?php include "header.php" ?>
 
 <div class="container">
 
@@ -49,6 +44,4 @@ img/gallery/pic-1.jpg
 
 </div>   
 
-<?php
-include "footer.php"
-?>
+<?php include "footer.php" ?>

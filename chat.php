@@ -1,6 +1,4 @@
-<?php
-include "header.php";
-?>
+<?php include "header.php" ?>
 
 <div class="container">
     Местный чат! Поговорим о происходящем!!
@@ -8,6 +6,4 @@ include "header.php";
 </div>
 
 
-<?php
-include "footer.php"
-?>
+<?php include "footer.php" ?>

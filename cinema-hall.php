@@ -14,7 +14,7 @@ $cinema_mass_place = explode(",", $cinema_mass[5]);
 
 <div class="container monitor"><?=$cinema_mass[3] ?></div>
 
-<form action="admin/ticket-check.php" method="POST">
+<form action="admin/folder-cinema/ticket-check.php" method="POST">
     
     <div class="container" id="cinema-hall">
 

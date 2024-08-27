@@ -1,6 +1,6 @@
 <?php
 
-require_once "connect.php";
+require_once "../connect.php";
 
 $name = $_COOKIE['name']; 
 $date = date("Y-m-d");

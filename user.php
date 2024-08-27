@@ -1,15 +1,5 @@
-<?php
-include "header.php"
-?>
-
-
-<?php
-if($_COOKIE['name'] == ""){
-	header("Location:/");
-}
-?>
-
-
+<?php include "header.php" ?>
+<?php if($_COOKIE['name'] == ""){ header("Location:/");} ?>
 
 <div class="container">
 	<div class="p-3 mb-2 bg-success text-white d-flex justify-content-between">
@@ -24,10 +14,9 @@ if($_COOKIE['name'] == ""){
 	</div>
 </div>
 
-
 <div class="container">	
 
-	<form method="POST" action="admin/user-order-food.php" id="form-food">
+	<form method="POST" action="admin/folder-food/user-order-food.php" id="form-food">
 
 	<div class="row row-cols-sm-3 row-cols-1 row-cols-md-6">
 		<div class="col">
@@ -167,6 +156,4 @@ if($_COOKIE['name'] == ""){
 </div>
 
 
-<?php
-include "footer.php"
-?>
+<?php include "footer.php" ?>

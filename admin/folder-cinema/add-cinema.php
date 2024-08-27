@@ -1,6 +1,6 @@
 <?php 
 
-    require_once "connect.php";
+    require_once "../connect.php";
 
     $date = $_POST["date"];
     $time = $_POST["time"];

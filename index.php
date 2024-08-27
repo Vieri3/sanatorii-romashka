@@ -1,6 +1,4 @@
-<?php
-include "header.php";
-?>
+<?php include "header.php" ?>
 
 <div class="container text-center">
     <marquee>
@@ -14,6 +12,4 @@ include "header.php";
     <img src="./img/pic.jpeg" class="img-fluid img-thumbnail" alt="Картинка пансионата">
 </div>
 
-<?php
-include "footer.php"
-?>
+<?php include "footer.php" ?>

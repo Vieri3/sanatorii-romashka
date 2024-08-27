@@ -1,5 +1,6 @@
-<?php 
-     require_once "connect.php";
+<?php require_once "../connect.php"; ?>
+
+<?php
 
      $place = $_POST["pl"];
      $id_cinema = $place[50];
