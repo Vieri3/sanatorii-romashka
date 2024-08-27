@@ -1,5 +1,4 @@
 <?php 
-
      require_once "connect.php";
 
      $place = $_POST["pl"];
@@ -10,7 +9,8 @@
      mysqli_query($connect, "UPDATE `cinema` SET `place` = '$str_places' WHERE `cinema` . `id` =  '$id_cinema' ");
 
      header("Location: http://sanatorii-romashka/user.php"); 
-   
+
+
 ?>
 
 
