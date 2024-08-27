@@ -22,6 +22,9 @@
 				</button>
 				<div class="collapse navbar-collapse" id="nav_lc">
 					<ul class="navbar-nav my-3 my-lg-0 ms-lg-3 me-auto">
+
+					<li class="nav-item me-4"><a class="nav-link" href="/admin/admin.php">ADMIN</a></li>
+			
 					<?php
 						if (isset($_COOKIE['name'])) {
 							echo '

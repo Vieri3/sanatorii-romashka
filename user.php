@@ -1,5 +1,7 @@
 <?php include "header.php" ?>
+<?php require_once "admin/connect.php" ?>
 <?php if($_COOKIE['name'] == ""){ header("Location:/");} ?>
+
 
 <div class="container">
 	<div class="p-3 mb-2 bg-success text-white d-flex justify-content-between">
@@ -14,9 +16,10 @@
 	</div>
 </div>
 
+
 <div class="container">	
 
-	<form method="POST" action="admin/folder-food/user-order-food.php" id="form-food">
+	<form method="POST" action="admin/food/food-order-user.php" id="form-food">
 
 	<div class="row row-cols-sm-3 row-cols-1 row-cols-md-6">
 		<div class="col">
@@ -64,7 +67,7 @@
 		</div>
 
 		<div class="col">
-			<div class="p-3 mb-2 bg-primary text-white text-center align-middle">Гарнир</div>
+			<div class="p-3 mb-2 bg-primary text-white text-center align-middle">Второе</div>
 			<div class="form-check">
 				<input class="form-check-input" type="checkbox" value="Пюре с котлетой" name="food-selection[]">
 				<label class="form-check-label" for="food-selection[]">

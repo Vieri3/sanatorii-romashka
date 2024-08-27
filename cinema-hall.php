@@ -1,20 +1,20 @@
-<?php
-include "header.php";
-require_once "admin/connect.php";
-$cinema_mass;
-foreach($cinema as $key){
-    if($key[0] == $_GET["id"]){
-        $cinema_mass = $key;
+<?php include "header.php" ?>
+<?php require_once "admin/connect.php" ?>
+<?php 
+    $cinema_mass;
+    foreach($cinema as $key){
+        if($key[0] == $_GET["id"]){
+            $cinema_mass = $key;
+        }
     }
-}
 
-$cinema_mass_place = explode(",", $cinema_mass[5]);
+    $cinema_mass_place = explode(",", $cinema_mass[5]);
 
 ?>
 
 <div class="container monitor"><?=$cinema_mass[3] ?></div>
 
-<form action="admin/folder-cinema/ticket-check.php" method="POST">
+<form action="admin/cinema/cinema-ticket-check.php" method="POST">
     
     <div class="container" id="cinema-hall">
 
@@ -46,4 +46,4 @@ $cinema_mass_place = explode(",", $cinema_mass[5]);
     
 </form>
 
-<?php include "footer.php"; ?>
+<?php include "footer.php" ?>

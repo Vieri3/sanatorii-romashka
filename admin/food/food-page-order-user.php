@@ -9,17 +9,19 @@
 	<title>ADMIN-food</title>
 </head>
     <body>
+        
+        <?php include "food-page-admin.php" ?>
 
-        <h2>Таблица заказов еды клиентов гостинницы</h2>
+        <h2>Таблица (что заказывали клиенты)</h2>
             <table>
                 <tr>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>date</th>
-                    <th>time</th>
-                    <th>meal</th>
+                    <th>food id</th>
+                    <th>food name</th>
+                    <th>food date</th>
+                    <th>food time</th>
+                    <th>food meal</th>
                 </tr>
-                <? foreach($meal as $item) { ?>
+                <? foreach($food as $item) { ?>
                     <tr>
                         <td><?=$item[0] ?></td>
                         <td><?=$item[1] ?></td>
@@ -29,10 +31,5 @@
                     </tr>
                 <? }; ?>
             </table>
-
-        <h2>Таблица-меню еды в гостинницы</h2>
-            <p>редактируемая таблица добавления изменения меню</p>
-
-
     </body>
 </html>

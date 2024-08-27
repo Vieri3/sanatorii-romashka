@@ -1,5 +1,4 @@
 
-
-	<a href="folder-cinema/admin-page-cinema.php">Кино</a>
-	<a href="folder-food/admin-page-food.php">Еда</a>
-	<a href="folder-news/admin-page-news.php">Новости</a>
+	<a href="http://sanatorii-romashka/admin/cinema/cinema-page-admin.php">Кино</a>
+	<a href="http://sanatorii-romashka/admin/food/food-page-admin.php">Еда</a>
+	<a href="http://sanatorii-romashka/admin/news/news-page-admin.php">Новости</a>
