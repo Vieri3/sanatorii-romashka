@@ -27,7 +27,7 @@ if($_COOKIE['name'] == ""){
 
 <div class="container">	
 
-	<form method="POST" action="/" id="form-food">
+	<form method="POST" action="admin/user-order-food.php" id="form-food">
 
 	<div class="row row-cols-sm-3 row-cols-1 row-cols-md-6">
 		<div class="col">
