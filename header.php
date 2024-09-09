@@ -7,6 +7,7 @@
 	<link rel="shortcut icon" href="./img/logo.ico" type="image">
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/shop.css">
 	<title>Санаторий Ромашка</title>
 </head>
 
@@ -35,6 +36,7 @@
 						<li class="nav-item me-4"><a class="nav-link" href="/cinema.php">КИНОТЕАТР</a></li>
 						<li class="nav-item me-4"><a class="nav-link" href="/news.php">НОВОСТИ</a></li>
 						<li class="nav-item me-4"><a class="nav-link" href="/chat.php">ЧАТ</a></li>
+						<li class="nav-item me-4"><a class="nav-link" href="/shop.php">МАГАЗИН</a></li>
 						';
 						}else{
 							echo '

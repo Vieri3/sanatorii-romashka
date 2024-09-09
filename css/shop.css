@@ -1,0 +1,63 @@
+
+.wrap-shop{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #BBDEF8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-shop{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.front-shop, .back-shop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+
+}
+
+.front-1-shop{
+    background: url('../img/shop/category-pic-1.png') center no-repeat;
+    background-size: cover;
+}
+
+.front-2-shop{
+    background: url('../img/shop/category-pic-2.png') center no-repeat;
+    background-size: cover;
+}
+
+.front-3-shop{
+    background: url('../img/shop/category-pic-3.png') center no-repeat;
+    background-size: cover;
+}
+
+.back-shop {
+    background-color: pink;
+    transform: rotateY(180deg);
+}
+
+.card-shop:hover .front-shop {
+    transform: rotateY(180deg);
+}
+
+.card-shop:hover .back-shop {
+    transform: rotateY(360deg);
+}
+
+
