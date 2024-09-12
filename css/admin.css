@@ -1,46 +1,91 @@
-*{
+* {
     font-family: sans-serif;
     box-sizing: border-box;
 }
-th,td {
+
+th,
+td {
     font-size: 18px;
     padding: 10px;
 }
-th{
+
+th {
     background: #555;
     color: #fff;
 }
-td{
+
+td {
     background: #eee;
 }
-a{
+
+a {
     text-decoration: none;
-    transition:  0.2s ease;
+    transition: 0.2s ease;
     color: #3f75c5;
 }
-a:hover{
+
+a:hover {
     opacity: 0.7;
 }
-p{
+
+p {
     font-style: italic;
 }
-input, textarea, button{
+
+input,
+textarea,
+button {
     padding: 10px;
     display: block;
     min-height: 30px;
     width: 250px;
     margin-bottom: 10px;
 }
-textarea{
+
+textarea {
     resize: vertical;
     height: 80px;
 }
-button{
+
+button {
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
 }
 
 .table-link-del {
-    color:#c22a2a;
+    color: #c22a2a;
 }
+
+
+/* Стиль списка */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+  }
+  
+  /* Отображение элементов списка бок о бок */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  
+  /* Добавить символ косой черты (/) перед/за каждым элементом списка */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+  
+  /* Добавить цвет для всех ссылок внутри списка */
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  /* Добавить цвет на наведении курсора мыши */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }

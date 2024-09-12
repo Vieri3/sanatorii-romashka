@@ -10,7 +10,10 @@
 </head>
     <body>
 
-    <?php include "../admin.php" ?>
+    <ul class="breadcrumb">
+        <li><a href="http://sanatorii-romashka/admin/admin.php">AДМИН</a></li>
+        <li>Редактор новостей</li>
+    </ul>
     
         <h2>Таблица новостей</h2>
 

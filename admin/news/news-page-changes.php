@@ -17,7 +17,11 @@
 </head>
 <body>
 
-    <?php include "../admin.php" ?>
+    <ul class="breadcrumb">
+        <li><a href="http://sanatorii-romashka/admin/admin.php">AДМИН</a></li>
+        <li><a href="http://sanatorii-romashka/admin/news/news-page-admin.php">Редактор новостей</a></li>
+        <li>Изменить новость</li>
+    </ul>
 
     <h2>Изменить данные новостей</h2>
         <form action="news-changes.php" method="post">

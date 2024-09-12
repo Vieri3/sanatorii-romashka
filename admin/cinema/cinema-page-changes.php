@@ -16,7 +16,11 @@
 </head>
 <body>
 
-    <?php include "../admin.php" ?>
+    <ul class="breadcrumb">
+        <li><a href="http://sanatorii-romashka/admin/admin.php">AДМИН</a></li>
+        <li><a href="http://sanatorii-romashka/admin/cinema/cinema-page-admin.php">Редактор фильмов</a></li>
+        <li>Изменить фильм</li>
+    </ul>
 
     <h2>Изменить данные</h2>
         <form action="cinema-changes.php" method="post">
