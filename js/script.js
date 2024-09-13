@@ -37,5 +37,41 @@ $(document).ready(function () { // Start work jQuery--------------------->>>>>>>
   })
 
 
+	$('#form-auth').submit(function (e) {
+		e.preventDefault();
+		const form = $(this);
+		const formMsg = $('#form-msg');
+		formMsg.removeClass('d-none');
+		$.ajax({
+			url: form.attr('action'),
+			data: form.serialize(),
+			type: form.attr('method'),
+			success: function (response) {
+				const responseJSON = JSON.parse(response);
+				if (responseJSON.status == 1) {
+					form[0].reset();
+					formMsg.addClass('d-none');
+					// setCookie('name', responseJSON.userName, 1);
+					// setCookie('role', responseJSON.userRole, 1);
+					window.location.href = '/user.php';
+				} else {
+					formMsg.html(responseJSON.message);
+				}
+			},
+			error: function (err) {
+				formMsg.text('Что-то пошло не так! Перезагрузи страницу и попытайся отправить форму еще раз!')
+			}
+		})
+	});
+
+
+	// function setCookie(cname, cvalue, exdays) {
+	// 	const d = new Date();
+	// 	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	// 	let expires = "expires=" + d.toUTCString();
+	// 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	// }
+
+
 }); // END work jQuery------------------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
