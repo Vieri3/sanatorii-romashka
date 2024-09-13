@@ -1,5 +1,13 @@
 <?php
-    $connect = mysqli_connect('localhost', 'root', '', 'san_rom');
+    require_once 'functions.php';
+
+    $db_host = CONFIG['db_host'];
+    $db_user = CONFIG['db_user'];
+    $db_pass = CONFIG['db_pass'];
+    $db_name = CONFIG['db_name'];
+
+    $connect = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+    
     if (!$connect) {
         die('Ошибка подключения к БД');
     };
