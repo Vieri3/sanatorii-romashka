@@ -51,8 +51,8 @@ $(document).ready(function () { // Start work jQuery--------------------->>>>>>>
 				if (responseJSON.status == 1) {
 					form[0].reset();
 					formMsg.addClass('d-none');
-					// setCookie('name', responseJSON.userName, 1);
-					// setCookie('role', responseJSON.userRole, 1);
+					setCookie('name', responseJSON.userName, 1);
+					setCookie('role', responseJSON.userRole, 1);
 					window.location.href = '/user.php';
 				} else {
 					formMsg.html(responseJSON.message);
@@ -65,12 +65,12 @@ $(document).ready(function () { // Start work jQuery--------------------->>>>>>>
 	});
 
 
-	// function setCookie(cname, cvalue, exdays) {
-	// 	const d = new Date();
-	// 	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-	// 	let expires = "expires=" + d.toUTCString();
-	// 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-	// }
+	function setCookie(cname, cvalue, exdays) {
+		const d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		let expires = "expires=" + d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
 
 
 }); // END work jQuery------------------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
