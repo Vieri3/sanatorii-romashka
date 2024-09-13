@@ -8,7 +8,7 @@
 			<div class="card">
 				<div class="card-body">
 					<h3 class="card-title">Авторизация</h3>
-					<form method="POST" action="/admin/auth.php">
+					<form id="form-auth" method="POST" action="/admin/auth.php">
 						<div class="form-group">
 							<label for="name">Имя</label>
 							<input type="text" name="name" class="form-control" placeholder="Имя">
