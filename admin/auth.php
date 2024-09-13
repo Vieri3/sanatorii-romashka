@@ -1,41 +1,60 @@
 <?php
-	$name = trim(filter_var($_POST['name'], FILTER_SANITIZE_SPECIAL_CHARS));
-	$password = trim(filter_var($_POST['password'], FILTER_SANITIZE_SPECIAL_CHARS));
+	require_once '../functions.php';
+	
+	$name 		= $_POST['name'];
+	$password	= $_POST['password'];
+	$email 		= $_POST['email'];
+	
+	$isAuth = $email == NULL;
 
-	if(strlen($name) < 2){
-		echo "Name ERROR!!!";
-		exit;
+	$name = prepareInput($name);
+	$password = prepareInput($password);
+	$email = prepareInput($email);
+	
+	$responseMsg = '';
+
+	// Проверяем имя пользователя
+	if($name == '')					
+		$responseMsg .= '- Имя пользователя не можеть быть пустым<br>';
+	else if( strlen( $name ) < 2 )
+		$responseMsg .= '- Длина имени пользователя не может быть менее 2 символов!<br>';
+	
+	// Проверяем пароль
+	if($password == '') 
+		$responseMsg .= '- Необходимо ввести пароль!<br>'; 
+	else if( strlen( $password ) < 4 )
+		$responseMsg .= '- Пароль должен содержать мининмум 4 символа!<br>';
+	
+	// Если страница регистрации, то проверяем также email
+	if(false == $isAuth){
+		if($email == '') 
+			$responseMsg .= '- Email необходим для регистрации!<br>'; 
+		else if( strlen( $email ) < 10 )
+			$responseMsg .= '- Email должен содержать мининмум 10 символов!<br>';
+		else if( str_contains( $email, '@' ) )
+			$responseMsg .= '- Email должен содержать символ - "@"!';
 	}
-	
-	if(strlen($password) < 4){
-		echo "Password ERROR!!!";
-		exit;
+
+	// Если данные со страницы авторизации и если сообщения об ошибке пусто то проверяем пользователя в БД
+	if($isAuth && $responseMsg == '' && false == isUserInDB($name, $password)){
+		$responseMsg = "Такого пользователя не существует!";
 	}
-	
-	//password
-	// кешируемый пароль пользователя 
-	$salt = 'sgn>?:"?{^&()*(^)^&*FGNHG#';
-	$password = md5($salt . $password);
-	
-	// DB 
-	$pdo = new PDO('mysql:host=localhost;dbname=san_rom;port=3306', 'root', '');
-	
-	// запрос в базу данных
-	$sql = "SELECT id FROM `users` WHERE `name` = ? AND `password` = ?";
-	
-	// подготовка 
-	$query = $pdo->prepare($sql);
-	$query->execute([$name, $password]);
-	
-	// проверка авторизации
-	if($query->rowCount() == 0) {
-		echo "Такого пользователя не существует!";
-	}
-	else{
-		//установим куки
-		setcookie('name', $name, time() + 60, "/"); 
-		header('Location: /user.php');
-	}
+
+	// if(false == $isAuth && $response == ''){
+	// 	insertDBdata('');
+	// }
+
+	$responseStatus = $responseMsg == '' ? 1 : 0;
+
+	$response = [
+		'status' 	=> $responseStatus,
+		'message'	=> $responseMsg,
+		'userName'	=> $name,
+	];
+
+
+	// Переводим массив php -> json чтобы в результат можно было читать в script.js
+	echo json_encode($response, JSON_UNESCAPED_UNICODE);
 	
 
 	
