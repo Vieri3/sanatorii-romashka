@@ -3,7 +3,7 @@
 	
 	$name 		= $_POST['name'];
 	$password	= $_POST['password'];
-	$email 		= $_POST['email'];
+	$email 		= isset($_POST['email']) ? $_POST['name'] : NULL;
 	
 	$isAuth = $email == NULL;
 
