@@ -26,20 +26,15 @@
 				<div class="collapse navbar-collapse" id="nav_lc">
 					<ul class="navbar-nav my-3 my-lg-0 ms-lg-3 me-auto">
 						<li class="nav-item me-4"><a class="nav-link" href="/admin/admin.php">ADMIN</a></li>
+						<li class="nav-item me-4"><a class="nav-link" href="/">ГЛАВНАЯ</a></li>
+						<li class="nav-item me-4"><a class="nav-link" href="/gallery.php">ГАЛЕРЕЯ</a></li>
+						<li class="nav-item me-4"><a class="nav-link" href="/contacts.php">КОНТАКТЫ</a></li>
+						<li class="nav-item me-4"><a class="nav-link" href="/about.php">О НАС</a></li>
 						<?php if (isset($_COOKIE['name'])) { ?>
-							<li class="nav-item me-4"><a class="nav-link" href="/">ГЛАВНАЯ</a></li>
-							<li class="nav-item me-4"><a class="nav-link" href="/gallery.php">ГАЛЕРЕЯ</a></li>
-							<li class="nav-item me-4"><a class="nav-link" href="/contacts.php">КОНТАКТЫ</a></li>
-							<li class="nav-item me-4"><a class="nav-link" href="/about.php">О НАС</a></li>
 							<li class="nav-item me-4"><a class="nav-link" href="/cinema.php">КИНОТЕАТР</a></li>
 							<li class="nav-item me-4"><a class="nav-link" href="/news.php">НОВОСТИ</a></li>
 							<li class="nav-item me-4"><a class="nav-link" href="/chat.php">ЧАТ</a></li>
 							<li class="nav-item me-4"><a class="nav-link" href="/shop.php">МАГАЗИН</a></li>
-						<?php }else{ ?>
-							<li class="nav-item me-4"><a class="nav-link" href="/">ГЛАВНАЯ</a></li>
-							<li class="nav-item me-4"><a class="nav-link" href="/gallery.php">ГАЛЕРЕЯ</a></li>
-							<li class="nav-item me-4"><a class="nav-link" href="/contacts.php">КОНТАКТЫ</a></li>
-							<li class="nav-item me-4"><a class="nav-link" href="/about.php">О НАС</a></li>
 						<?php } ?>
 					</ul>
 					<div>
