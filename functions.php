@@ -73,6 +73,13 @@ function isUserInDB($name, $password){
     return false;
 }
 
-
+// Add a new user in DB
+function addNewUser($name, $email, $password, $role='user'){
+    $salt = CONFIG['db_salt'];
+	$password = md5($salt . $password);
+    $sql = "INSERT INTO `users` (`name`, `email`, `password`, `role`)
+			VALUES ('" . $name . "', '" . $email . "', '" . $password . "', '" . $role . "')";
+    return insertDBdata($sql);
+}
 
 ?>
