@@ -5,11 +5,7 @@
 
 <div class="container">
 	<div class="p-3 mb-2 bg-success text-white d-flex justify-content-between">
-		<div>
-			<span>Привет, </span>
-			<b><?php echo $_COOKIE['name']; ?></b>
-			<span>!!!</span>
-		</div>
+		<div>Привет, <b><?php echo $_COOKIE['name']; ?></b>!!!</span>P</div>
 		<div>
 			<?php echo date("Y-m-d H:i:s"); ?>
 		</div>
