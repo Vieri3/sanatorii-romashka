@@ -37,7 +37,7 @@ $(document).ready(function () { // Start work jQuery--------------------->>>>>>>
 	})
 
 
-	$('#form-auth').submit(function (e) {
+	$('#form-access').submit(function (e) {
 		e.preventDefault();
 		const form = $(this);
 		const formMsg = $('#form-msg');
@@ -52,7 +52,6 @@ $(document).ready(function () { // Start work jQuery--------------------->>>>>>>
 					form[0].reset();
 					formMsg.addClass('d-none');
 					setCookie('name', responseJSON.userName, 1);
-					setCookie('role', responseJSON.userRole, 1);
 					window.location.href = '/user.php';
 				} else {
 					formMsg.html(responseJSON.message);
