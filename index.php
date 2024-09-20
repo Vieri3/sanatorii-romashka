@@ -8,7 +8,7 @@
         Жизнь как сметана
         Жизнь как перина
     </marquee>
-    <h1>Пансионат Ромашка</h1>
+    <h1 class="text-decoration-underline">Пансионат Ромашка</h1>
     <img src="./img/pic.jpeg" class="img-fluid img-thumbnail" alt="Картинка пансионата">
 </div>
 
