@@ -39,16 +39,16 @@ function selectDBdata($sql){
 }
 
 
-// function insertDBdata($sql){
-//     $conn = getDBconn();
-//     if ( mysqli_query( $conn, $sql ) ) {
-//         $result = 1;
-//     } else {
-//         $result = 0;
-//     }
-//     mysqli_close($conn);
-//     return $result;
-// }
+function insertDBdata($sql){
+    $conn = getDBconn();
+    if ( mysqli_query( $conn, $sql ) ) {
+        $result = 1;
+    } else {
+        $result = 0;
+    }
+    mysqli_close($conn);
+    return $result;
+}
 
 
 function prepareInput($data) {
