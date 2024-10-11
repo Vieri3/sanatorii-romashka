@@ -26,16 +26,16 @@
                         <th>&#9998;</th>
                         <th>&#10006;</th>
                     </tr>
-                    <? foreach($news as $item) { ?>
+                    <?php foreach($news as $item) { ?>
                         <tr>
-                            <td><?=$item[0] ?></td>
-                            <td><?=$item[1] ?></td>
-                            <td><?=$item[2] ?></td>
-                            <td><?=$item[3] ?></td>
-                            <td><a href="news-page-changes.php?id=<?=$item[0]?>">Изменить</a></td>
-                            <td><a href="news-del.php?id=<?=$item[0]?>" class="table-link-del">Удалить</a></td>
+                            <td><?php echo $item[0] ?></td>
+                            <td><?php echo $item[1] ?></td>
+                            <td><?php echo $item[2] ?></td>
+                            <td><?php echo $item[3] ?></td>
+                            <td><a href="news-page-changes.php?id=<?php echo $item[0]?>">Изменить</a></td>
+                            <td><a href="news-del.php?id=<?php echo $item[0]?>" class="table-link-del">Удалить</a></td>
                         </tr>
-                    <? }; ?>
+                    <?php }; ?>
                 </table>
 
                 <h2>Добавить новые новости</h2>

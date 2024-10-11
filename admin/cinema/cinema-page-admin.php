@@ -27,18 +27,18 @@
                     <th>&#9998;</th>
                     <th>&#10006;</th>
                 </tr>
-                <? foreach($cinema as $item) { ?>
+                <?php foreach($cinema as $item) { ?>
                     <tr>
-                        <td><?=$item[0] ?></td>
-                        <td><?=$item[1] ?></td>
-                        <td><?=$item[2] ?></td>
-                        <td><?=$item[3] ?></td>
-                        <td><?=$item[4] ?></td>
-                        <td><?=$item[5] ?></td>
-                        <td><a href="cinema-page-changes.php?id=<?=$item[0]?>">Изменить</a></td>
-                        <td><a class="table-link-del" href="cinema-del.php?id=<?=$item[0]?>">Удалить</a></td>
+                        <td><?php echo $item[0] ?></td>
+                        <td><?php echo $item[1] ?></td>
+                        <td><?php echo $item[2] ?></td>
+                        <td><?php echo $item[3] ?></td>
+                        <td><?php echo $item[4] ?></td>
+                        <td><?php echo $item[5] ?></td>
+                        <td><a href="cinema-page-changes.php?id=<?php echo $item[0] ?>">Изменить</a></td>
+                        <td><a class="table-link-del" href="cinema-del.php?id=<?php echo $item[0] ?>">Удалить</a></td>
                     </tr>
-                <? }; ?>
+                <?php }; ?>
             </table>
 
         <h2>Добавить новые фильмов</h2>

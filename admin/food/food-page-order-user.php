@@ -21,15 +21,15 @@
                     <th>food time</th>
                     <th>food meal</th>
                 </tr>
-                <? foreach($food as $item) { ?>
+                <?php foreach($food as $item) { ?>
                     <tr>
-                        <td><?=$item[0] ?></td>
-                        <td><?=$item[1] ?></td>
-                        <td><?=$item[2] ?></td>
-                        <td><?=$item[3] ?></td>
-                        <td><?=$item[4] ?></td>
+                        <td><?php echo  $item[0] ?></td>
+                        <td><?php echo  $item[1] ?></td>
+                        <td><?php echo  $item[2] ?></td>
+                        <td><?php echo  $item[3] ?></td>
+                        <td><?php echo  $item[4] ?></td>
                     </tr>
-                <? }; ?>
+                <?php }; ?>
             </table>
     </body>
 </html>
