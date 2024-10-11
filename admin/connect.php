@@ -1,5 +1,5 @@
 <?php
-    require_once 'functions.php';
+    require_once $_SERVER["DOCUMENT_ROOT"] . '/functions.php';
 
     $db_host = CONFIG['db_host'];
     $db_user = CONFIG['db_user'];
