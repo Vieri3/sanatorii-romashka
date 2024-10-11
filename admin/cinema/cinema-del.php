@@ -6,6 +6,6 @@
 
     mysqli_query($connect, "DELETE FROM `cinema` WHERE `cinema`.`cinema_id` = '$cinema_id'");
 
-    header('Location: http://sanatorii-romashka/admin/cinema/cinema-page-admin.php');
+    header('Location: http://' . $_SERVER["SERVER_NAME"] . '/admin/cinema/cinema-page-admin.php');
 
 ?>

@@ -6,6 +6,6 @@
 
     mysqli_query($connect, "DELETE FROM `news` WHERE `news`.`news_id` = '$news_id'");
 
-    header('Location: http://sanatorii-romashka/admin/news/news-page-admin.php');
+    header('Location: http://' . $_SERVER["SERVER_NAME"] . '/admin/news/news-page-admin.php');
 
 ?>

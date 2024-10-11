@@ -12,7 +12,7 @@
 <body>
 
     <ul class="breadcrumb">
-        <li><a href="http://sanatorii-romashka/admin/admin.php">AДМИН</a></li>
+        <li><a href="http://<?php echo $_SERVER["SERVER_NAME"] ?>/admin/admin.php">AДМИН</a></li>
         <li>Админ еды</li>
     </ul>
 

@@ -8,6 +8,6 @@
 
     mysqli_query($connect, "INSERT INTO `news` (`news_id` , `news_date`, `news_text`, `news_color`) VALUES (NULL, '$news_date', '$news_text', '$news_color')");
 
-    header('Location: http://sanatorii-romashka/admin/news/news-page-admin.php');
+    header('Location: http://' . $_SERVER["SERVER_NAME"] . '/admin/news/news-page-admin.php');
 
 ?>
