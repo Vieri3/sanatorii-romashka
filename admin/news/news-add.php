@@ -1,6 +1,6 @@
 <?php 
 
-    require_once "../connect.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] .  "/admin/connect.php";
 
     $news_date = $_POST["news_date"];
     $news_text = $_POST["news_text"];

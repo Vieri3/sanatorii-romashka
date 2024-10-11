@@ -1,6 +1,6 @@
-<?php require_once "../connect.php"; ?>
-
 <?php
+    
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/admin/connect.php";
 
     $cinema_id = $_POST["cinema_id"];
     $cinema_date = $_POST["cinema_date"];

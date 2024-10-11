@@ -1,5 +1,5 @@
-<?php  require_once "../connect.php"; ?>
 <?php
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/admin/connect.php";
     $cinema_id_get = $_GET["id"];
     $cinema = mysqli_query($connect, "SELECT * FROM `cinema` WHERE `cinema_id` = '$cinema_id_get'");
     $cinema = mysqli_fetch_assoc($cinema); 

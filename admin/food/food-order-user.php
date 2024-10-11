@@ -1,6 +1,6 @@
 <?php
 
-require_once "../connect.php";
+require_once $_SERVER["DOCUMENT_ROOT"] .  "/admin/connect.php";
 
 $food_name = $_COOKIE['name']; 
 $food_date = date("Y-m-d");
