@@ -5,10 +5,10 @@
 
 <div class="container">
     <?php foreach($news as $item){ ?>
-        <div class="alert alert-<?=$item[3] ?>" role="alert">
-            <p><?=$item[1] ?></p>
-                <?=$item[2] ?>
-        </div>
+    <div class="alert alert-<?php echo $item['news_color'] ?>" role="alert">
+        <p><?php echo $item['news_date'] ?></p>
+        <?php echo $item['news_text'] ?>
+    </div>
     <?php } ?>
 </div>
 
