@@ -1,8 +1,7 @@
 <?php
-    require_once $_SERVER["DOCUMENT_ROOT"] .  "/admin/connect.php";
-    $news_id_get = $_GET["id"];
-    $news = mysqli_query($connect, "SELECT * FROM `news` WHERE `news_id` = $news_id_get");
-    $news = mysqli_fetch_assoc($news); 
+    require_once $_SERVER["DOCUMENT_ROOT"] .  "/functions.php";
+    $news_id = $_GET["id"];
+    $singleNews = selectDBdata("SELECT * FROM `news` WHERE `news_id` = $news_id");
 ?>
 
 

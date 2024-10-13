@@ -1,4 +1,7 @@
-<?php require_once $_SERVER["DOCUMENT_ROOT"] .  "/admin/connect.php"; ?>
+<?php
+    require_once $_SERVER["DOCUMENT_ROOT"] .  "/functions.php";
+    $news = selectDBdata("SELECT * FROM `news`");    
+?>
 
 <!DOCTYPE html>
 <html lang="en">

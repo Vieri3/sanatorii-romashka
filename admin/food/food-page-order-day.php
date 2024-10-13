@@ -1,4 +1,4 @@
-<?php require_once $_SERVER["DOCUMENT_ROOT"] . "/admin/connect.php"; ?>
+<?php require_once $_SERVER["DOCUMENT_ROOT"] . "/functions.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
