@@ -1,7 +1,7 @@
 <?php
     require_once $_SERVER["DOCUMENT_ROOT"] . "/functions.php";
     $movie_id = $_GET["id"];
-    $movie = selectDBdata("SELECT * FROM `cinema` WHERE `cinema_id` = '$movie_id'");
+    $movie = selectDBdata("SELECT * FROM `cinema` WHERE `cinema_id` = '$movie_id'")[0];
 ?>
 
 

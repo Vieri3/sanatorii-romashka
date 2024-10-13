@@ -1,7 +1,7 @@
 <?php
     require_once $_SERVER["DOCUMENT_ROOT"] .  "/functions.php";
     $news_id = $_GET["id"];
-    $singleNews = selectDBdata("SELECT * FROM `news` WHERE `news_id` = $news_id");
+    $singleNews = selectDBdata("SELECT * FROM `news` WHERE `news_id` = $news_id")[0];
 ?>
 
 
