@@ -37,8 +37,8 @@
             <td><?php echo $newsItem['news_date'] ?></td>
             <td><?php echo $newsItem['news_text'] ?></td>
             <td><?php echo $newsItem['news_color'] ?></td>
-            <td><a href="news-page-changes.php?id=<?php echo $newsItem['id']?>">Изменить</a></td>
-            <td><a href="news-del.php?id=<?php echo $newsItem['id']?>" class="table-link-del">Удалить</a></td>
+            <td><a href="news-page-changes.php?id=<?php echo $newsItem['news_id']?>">Изменить</a></td>
+            <td><a href="news-del.php?id=<?php echo $newsItem['news_id']?>" class="table-link-del">Удалить</a></td>
         </tr>
         <?php }; ?>
     </table>
