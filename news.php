@@ -1,5 +1,7 @@
-<?php include "header.php" ?>
-<?php require_once "admin/connect.php" ?>
+<?php
+    include "header.php";
+    $news = selectDBdata("SELECT * FROM `news`");
+?>
 
 <div class="container">
     <?php foreach($news as $item){ ?>

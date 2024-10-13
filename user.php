@@ -1,5 +1,4 @@
 <?php include "header.php" ?>
-<?php require_once "admin/connect.php" ?>
 <?php if($_COOKIE['name'] == ""){ header("Location:/");} ?>
 
 
