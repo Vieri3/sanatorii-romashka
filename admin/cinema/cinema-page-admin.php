@@ -23,25 +23,25 @@
     <h2>Таблица фильмов</h2>
     <table>
         <tr>
-            <th>cinema id</th>
-            <th>cinema date</th>
-            <th>cinema time</th>
-            <th>cinema title</th>
-            <th>cinema title data</th>
-            <th>cinema place</th>
+            <th>Movie id</th>
+            <th>Movie date</th>
+            <th>Movie time</th>
+            <th>Movie title</th>
+            <th>Movie title data</th>
+            <th>Movie place</th>
             <th>&#9998;</th>
             <th>&#10006;</th>
         </tr>
-        <?php foreach($cinema as $item) { ?>
+        <?php foreach($movies as $movie) { ?>
         <tr>
-            <td><?php echo $item[0] ?></td>
-            <td><?php echo $item[1] ?></td>
-            <td><?php echo $item[2] ?></td>
-            <td><?php echo $item[3] ?></td>
-            <td><?php echo $item[4] ?></td>
-            <td><?php echo $item[5] ?></td>
-            <td><a href="cinema-page-changes.php?id=<?php echo $item[0] ?>">Изменить</a></td>
-            <td><a class="table-link-del" href="cinema-del.php?id=<?php echo $item[0] ?>">Удалить</a></td>
+            <td><?php echo $movie['cinema_id'] ?></td>
+            <td><?php echo $movie['cinema_date'] ?></td>
+            <td><?php echo $movie['cinema_time'] ?></td>
+            <td><?php echo $movie['cinema_title'] ?></td>
+            <td><?php echo $movie['cinema_title_data'] ?></td>
+            <td><?php echo $movie['cinema_place'] ?></td>
+            <td><a href="cinema-page-changes.php?id=<?php echo $movie['cinema_id'] ?>">Изменить</a></td>
+            <td><a class="table-link-del" href="cinema-del.php?id=<?php echo $movie['cinema_id'] ?>">Удалить</a></td>
         </tr>
         <?php }; ?>
     </table>
@@ -49,15 +49,15 @@
     <h2>Добавить новые фильмов</h2>
 
     <form action="cinema-add.php" method="post">
-        <p>cinema date</p>
+        <p>Movie date</p>
         <input type="text" name="cinema_date" placeholder="YYYY-MM-DD">
-        <p>cinema time</p>
+        <p>Movie time</p>
         <input type="text" name="cinema_time" placeholder="HH:MM:SS">
-        <p>cinema title</p>
+        <p>Movie title</p>
         <input type="text" name="cinema_title">
-        <p>cinema title data</p>
+        <p>Movie title data</p>
         <input type="text" name="cinema_title_data">
-        <p>cinema place</p>
+        <p>Movie place</p>
         <textarea
             name="cinema_place">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</textarea>
         <button type="submit">Добавить</button>

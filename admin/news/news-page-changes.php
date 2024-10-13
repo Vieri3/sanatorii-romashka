@@ -26,13 +26,13 @@
 
     <h2>Изменить данные новостей</h2>
     <form action="news-changes.php" method="post">
-        <input type="hidden" name="news_id" value="<?=$news['news_id'] ?>">
+        <input type="hidden" name="news_id" value="<?php echo $singleNews['news_id'] ?>">
         <p>date</p>
-        <input type="text" name="news_date" placeholder="YYYY-MM-DD" value="<?=$news['news_date']?>">
+        <input type="text" name="news_date" placeholder="YYYY-MM-DD" value="<?php echo $singleNews['news_date']?>">
         <p>news text</p>
-        <textarea name="news_text"><?=$news['news_text']?></textarea>
+        <textarea name="news_text"><?php echo $singleNews['news_text']?></textarea>
         <p>news color</p>
-        <input type="text" name="news_color" placeholder="color" value="<?=$news['news_color']?>">
+        <input type="text" name="news_color" placeholder="color" value="<?php echo $singleNews['news_color']?>">
         <button type="submit">
             Изменить
         </button>

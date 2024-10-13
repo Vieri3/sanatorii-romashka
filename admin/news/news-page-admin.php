@@ -31,14 +31,14 @@
             <th>&#9998;</th>
             <th>&#10006;</th>
         </tr>
-        <?php foreach($news as $item) { ?>
+        <?php foreach($news as $newsItem) { ?>
         <tr>
-            <td><?php echo $item[0] ?></td>
-            <td><?php echo $item[1] ?></td>
-            <td><?php echo $item[2] ?></td>
-            <td><?php echo $item[3] ?></td>
-            <td><a href="news-page-changes.php?id=<?php echo $item[0]?>">Изменить</a></td>
-            <td><a href="news-del.php?id=<?php echo $item[0]?>" class="table-link-del">Удалить</a></td>
+            <td><?php echo $newsItem['news_id'] ?></td>
+            <td><?php echo $newsItem['news_date'] ?></td>
+            <td><?php echo $newsItem['news_text'] ?></td>
+            <td><?php echo $newsItem['news_color'] ?></td>
+            <td><a href="news-page-changes.php?id=<?php echo $newsItem['id']?>">Изменить</a></td>
+            <td><a href="news-del.php?id=<?php echo $newsItem['id']?>" class="table-link-del">Удалить</a></td>
         </tr>
         <?php }; ?>
     </table>
@@ -57,11 +57,11 @@
                         </div>
                     -->
     <form action="news-add.php" method="post">
-        <p>news date</p>
+        <p>Single news date</p>
         <input type="text" name="news_date" placeholder="YYYY-MM-DD">
-        <p>news text</p>
+        <p>Single news text</p>
         <textarea name="news_text"></textarea>
-        <p>news color</p>
+        <p>Single news color</p>
         <input type="text" name="news_color">
         <button type="submit">
             Добавить

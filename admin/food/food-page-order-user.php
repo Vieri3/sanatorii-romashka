@@ -26,13 +26,13 @@
             <th>food time</th>
             <th>food meal</th>
         </tr>
-        <?php foreach($food as $item) { ?>
+        <?php foreach($foodList as $foodItem) { ?>
         <tr>
-            <td><?php echo  $item[0] ?></td>
-            <td><?php echo  $item[1] ?></td>
-            <td><?php echo  $item[2] ?></td>
-            <td><?php echo  $item[3] ?></td>
-            <td><?php echo  $item[4] ?></td>
+            <td><?php echo  $foodItem['food_id'] ?></td>
+            <td><?php echo  $foodItem['food_name'] ?></td>
+            <td><?php echo  $foodItem['food_date'] ?></td>
+            <td><?php echo  $foodItem['food_time'] ?></td>
+            <td><?php echo  $foodItem['food_meal'] ?></td>
         </tr>
         <?php }; ?>
     </table>

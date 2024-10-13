@@ -26,17 +26,17 @@
 
     <h2>Изменить данные</h2>
     <form action="cinema-changes.php" method="post">
-        <input type="hidden" name="cinema_id" value="<?=$cinema['cinema_id'] ?>">
+        <input type="hidden" name="cinema_id" value="<?php echo $movie['cinema_id'] ?>">
         <p>cinema date</p>
-        <input type="text" name="cinema_date" placeholder="YYYY-MM-DD" value="<?=$cinema['cinema_date']?>">
+        <input type="text" name="cinema_date" placeholder="YYYY-MM-DD" value="<?php echo $movie['cinema_date']?>">
         <p>cinema time</p>
-        <input type="text" name="cinema_time" placeholder="HH:MM:SS" value="<?=$cinema['cinema_time']?>">
+        <input type="text" name="cinema_time" placeholder="HH:MM:SS" value="<?php echo $movie['cinema_time']?>">
         <p>cinema title</p>
-        <input type="text" name="cinema_title" value="<?=$cinema['cinema_title']?>">
+        <input type="text" name="cinema_title" value="<?php echo $movie['cinema_title']?>">
         <p>cinema title data</p>
-        <input type="text" name="cinema_title_data" value="<?=$cinema['cinema_title_data']?>">
+        <input type="text" name="cinema_title_data" value="<?php echo $movie['cinema_title_data']?>">
         <p>cinema place</p>
-        <textarea name="cinema_place"><?=$cinema['cinema_place']?></textarea>
+        <textarea name="cinema_place"><?php echo $movie['cinema_place']?></textarea>
         <button type="submit">Изменить</button>
     </form>
 
