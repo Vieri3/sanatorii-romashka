@@ -51,6 +51,30 @@ function insertDBdata($sql){
 }
 
 
+function updateDBdata($sql){
+    $conn = getDBconn();
+    if ( mysqli_query( $conn, $sql ) ) {
+        $result = 1;
+    } else {
+        $result = 0;
+    }
+    mysqli_close($conn);
+    return $result;
+}
+
+
+function deleteDBdata($sql){
+    $conn = getDBconn();
+    if ( mysqli_query( $conn, $sql ) ) {
+        $result = 1;
+    } else {
+        $result = 0;
+    }
+    mysqli_close($conn);
+    return $result;
+}
+
+
 function prepareInput($data) {
     $data = trim($data);
     $data = stripslashes($data);
