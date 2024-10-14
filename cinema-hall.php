@@ -1,6 +1,7 @@
-<?php include "header.php" ?>
-<?php require_once "admin/connect.php" ?>
 <?php 
+    include "header.php";
+    $movies = selectDBdata("SELECT * FROM `cinema`");
+
     $cinema_mass;
     foreach($cinema as $key){
         if($key[0] == $_GET["id"]){

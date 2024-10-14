@@ -1,5 +1,7 @@
-<?php include "header.php"?>
-<?php require_once "admin/connect.php" ?>
+<?php 
+    include "header.php";
+    $movies = selectDBdata("SELECT * FROM `cinema`");
+?>
 
 
  <div class="container text-center">
