@@ -45,9 +45,13 @@
 
             <aside class="col">
                 <ul>
-                    <?php foreach($cinema as $key) { ?>
+                    <?php foreach($movies as $movie) { ?>
                         <li>
-                            <a href = "/cinema-hall.php?id=<?=$key[0]?>"> <?=$key[1]?> <?=$key[2]?> <?=$key[3]?> </a>
+                            <a href="/cinema-hall.php?id=<?php echo $movie['cinema_id']?>">
+                                <?php echo $movie['cinema_date']?>
+                                <?php echo $movie['cinema_title']?>
+                                <?php echo $movie['cinema_title_data']?>
+                            </a>
                         </li>
                     <?php }?>
                 </ul>

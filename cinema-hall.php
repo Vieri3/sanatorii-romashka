@@ -1,45 +1,34 @@
 <?php 
     include "header.php";
-    $movies = selectDBdata("SELECT * FROM `cinema`");
-
-    $cinema_mass;
-    foreach($cinema as $key){
-        if($key[0] == $_GET["id"]){
-            $cinema_mass = $key;
-        }
-    }
-
-    $cinema_mass_place = explode(",", $cinema_mass[5]);
-
+    $movie_id = $_GET['id'];
+    $movie = selectDBdata("SELECT * FROM `cinema` WHERE `cinema`.`cinema_id` = '$movie_id'")[0];
+    $movie_seats = explode(",", $movie['cinema_place']);
 ?>
 
-<div class="container monitor"><?=$cinema_mass[3] ?></div>
+<div class="container monitor"><?php echo $movie['cinema_title'] ?></div>
 
-<form action="admin/cinema/cinema-ticket-check.php" method="POST">
+<form action="/admin/cinema/cinema-ticket-check.php" method="POST">
     
     <div class="container" id="cinema-hall">
 
-        <?php foreach($cinema_mass_place as $index=>$place) { 
-            if($place == 0) {
-        ?>
-            <div class = "not-sold-ticket"> 
-                М-<?php echo ($index + 1) ?> 
-                <input type="hidden" name="pl[]" value="<?php echo $place ?>">
-            </div>
-
-         <?php } else { ?>
-
-            <div class = "sold-ticket"> 
-                М-<?php echo ($index + 1) ?> 
-                <input type="hidden" name="pl[]" value="<?php echo $place ?>">
-            </div>
-
-        <?php } } ?>
-
+        <?php foreach( $movie_seats as $seatIndex => $seat ) { ?> 
+            <?php $seatNo = $seatIndex + 1; ?>
+            <?php if( $seat == 0 ) { ?>
+                <div class="not-sold-ticket"> 
+                    М-<?php echo $seatNo; ?> 
+                    <input type="hidden" name="pl[]" value="<?php echo $seat ?>">
+                </div>
+            <?php } else { ?>
+                <div class="sold-ticket"> 
+                    М-<?php echo $seatNo; ?> 
+                    <input type="hidden" name="pl[]" value="<?php echo $seat ?>">
+                </div>
+            <?php } ?>
+        <?php } ?>
 
     </div>
 
-    <input type="hidden" name="pl[]" value="<?=$cinema_mass[0] ?>">
+    <input type="hidden" name="pl[]" value="<?php echo $movie['cinema_id'] ?>">
 
     <div class="btn_otpravit">
         <button type="submit" class="btn btn-danger">Отправить</button>
