@@ -15,7 +15,7 @@
 
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-light py-4">
+		<nav class="navbar navbar-expand-lg bg-light shadow-sm py-3">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="/">
 					<img class="img-fluid" src="./img/logo.ico" alt="logo" width="48px" height="48px">
