@@ -4,7 +4,7 @@
 
     $news_id = $_GET["id"];
 
-    deleteDBdata("DELETE FROM `news` WHERE `news`.`news_id` = '$news_id'");
+    deleteDBdata("DELETE FROM `news` WHERE `news_id` = '$news_id'");
 
     header('Location: http://' . $_SERVER["SERVER_NAME"] . '/admin/news/news-page-admin.php');
 

@@ -4,7 +4,7 @@
 
     $cinema_id = $_GET["id"];
 
-    deleteDBdata( "DELETE FROM `cinema` WHERE `cinema`.`cinema_id` = '$cinema_id'");
+    deleteDBdata( "DELETE FROM `cinema` WHERE `cinema_id` = '$cinema_id'");
 
     header('Location: http://' . $_SERVER["SERVER_NAME"] . '/admin/cinema/cinema-page-admin.php');
 
