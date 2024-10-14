@@ -24,37 +24,35 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="nav_lc">
-					<ul class="navbar-nav my-3 my-lg-0 ms-lg-3 me-auto">
-						<li class="nav-item me-4"><a class="nav-link" href="/admin/admin.php">ADMIN</a></li>
-						<li class="nav-item me-4"><a class="nav-link" href="/">ГЛАВНАЯ</a></li>
-						<li class="nav-item me-4"><a class="nav-link" href="/gallery.php">ГАЛЕРЕЯ</a></li>
-						<li class="nav-item me-4"><a class="nav-link" href="/contacts.php">КОНТАКТЫ</a></li>
-						<li class="nav-item me-4"><a class="nav-link" href="/about.php">О НАС</a></li>
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item px-1"><a class="nav-link" href="/admin/admin.php">ADMIN</a></li>
+						<li class="nav-item px-1"><a class="nav-link" href="/">ГЛАВНАЯ</a></li>
+						<li class="nav-item px-1"><a class="nav-link" href="/gallery.php">ГАЛЕРЕЯ</a></li>
+						<li class="nav-item px-1"><a class="nav-link" href="/contacts.php">КОНТАКТЫ</a></li>
+						<li class="nav-item px-1"><a class="nav-link" href="/about.php">О НАС</a></li>
 						<?php if (isset($_COOKIE['name'])) { ?>
-							<li class="nav-item me-4"><a class="nav-link" href="/cinema.php">КИНОТЕАТР</a></li>
-							<li class="nav-item me-4"><a class="nav-link" href="/news.php">НОВОСТИ</a></li>
-							<li class="nav-item me-4"><a class="nav-link" href="/chat.php">ЧАТ</a></li>
-							<li class="nav-item me-4"><a class="nav-link" href="/shop.php">МАГАЗИН</a></li>
+							<li class="nav-item px-1"><a class="nav-link" href="/cinema.php">КИНОТЕАТР</a></li>
+							<li class="nav-item px-1"><a class="nav-link" href="/news.php">НОВОСТИ</a></li>
+							<li class="nav-item px-1"><a class="nav-link" href="/chat.php">ЧАТ</a></li>
+							<li class="nav-item px-1"><a class="nav-link" href="/shop.php">МАГАЗИН</a></li>
 						<?php } ?>
 					</ul>
 					<div>
 						<?php if (isset($_COOKIE['name'])) { ?>
-							<ul class="navbar-nav my-3 my-lg-0 ms-lg-3 me-auto">
-								<li class="nav-item me-4">
+							<ul class="navbar-nav">
+								<li class="nav-item me-3">
 									<a class="btn btn-primary" href="/user.php">Мой Кабинет</a>
 								</li>
-								<br>
-								<li class="nav-item me-4">
+								<li class="nav-item">
 									<a class="btn btn-danger" href="/admin/exit.php">Выход</a>
 								</li>
 							</ul>
 						<?php } else { ?>
-							<ul class="navbar-nav my-3 my-lg-0 ms-lg-3 me-auto">
-								<li class="nav-item me-4">
+							<ul class="navbar-nav">
+								<li class="nav-item me-3">
 									<a class="btn btn-primary" href="/reg.php">Регистрация</a>
 								</li>
-								<br>
-								<li class="nav-item me-4">
+								<li class="nav-item">
 									<a class="btn btn-primary" href="/auth.php">Авторизация</a>
 								</li>
 							</ul>
